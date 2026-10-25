@@ -235,33 +235,6 @@
             ],
             "enlace": { "campo": "url_informe", "texto": "Ver informe técnico (PDF)" }
           }
-        },
-        {
-          "id": "geologia_depositos",
-          "nombre": "Geología: depósitos",
-          "descripcion": "Atención: esta capa no se superpone con la cuenca; falta revisar su ubicación.",
-          "archivo": "data/geologia_depositos.geojson",
-          "visible": false,
-          "orden": 22,
-          "estilo": {
-            "tipo": "categorias",
-            "campo": "origen",
-            "base": { "peso": 0.8, "opacidadRelleno": 0.45 },
-            "categorias": [
-              { "valor": "Depósito Aluvial", "etiqueta": "Depósito aluvial", "estilo": { "color": "#D9B779", "relleno": "#D9B779" } },
-              { "valor": "Depósito de Vertiente", "etiqueta": "Depósito de vertiente", "estilo": { "color": "#A1887F", "relleno": "#A1887F" } }
-            ]
-          },
-          "popup": {
-            "titulo": "{unidad}",
-            "subtitulo": "Unidad geológica",
-            "campos": [
-              { "campo": "origen", "etiqueta": "Origen" },
-              { "campo": "tipo", "etiqueta": "Tipo" },
-              { "campo": "nivel", "etiqueta": "Nivel" },
-              { "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }
-            ]
-          }
         }
       ]
     },
