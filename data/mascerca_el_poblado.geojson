@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "mascerca_el_poblado",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "nombre": "MasCerca El Poblado", "direccion": "Carrera 43D # 11-02", "barrio": "Manila", "comuna": "14 - El Poblado", "detalle": "Teléfono: Línea Única de Atención (604) 44 44 144; Horario: Lunes a viernes, 7:30 a.m. - 5:00 p.m. (jornada continua); Barrios atendidos: Lalinde, La Florida, Manila, Astorga, Las Lomas, El Poblado; Servicios: Sisbén, mínimo vital de agua, impuesto predial, catastro, PQRSD, pago de impuestos (predial, industria y comercio, rodamiento, semaforización), matrícula de vehículos, trámites de movilidad; Relevancia territorial: Sede institucional ubicada en la parte alta de la cuenca de la quebrada La Presidenta (cerca del puente sobre la quebrada La Poblada, tributaria), dentro del área de los barrios afectados por inundaciones recurrentes. Punto de referencia para gestión ciudadana y posible canal de reporte comunitario ante eventos de riesgo.; Fuente: Alcaldía de Medellín, Secretaría de Gestión Humana y Servicio a la Ciudadanía (medellin.gov.co)" }, "geometry": { "type": "Point", "coordinates": [ -75.571757, 6.212385 ] } }
+]
+}

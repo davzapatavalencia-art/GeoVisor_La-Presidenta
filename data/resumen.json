@@ -1,0 +1,571 @@
+{
+  "generado": "2026-10-25",
+  "cuenca": {
+    "area_ha": 1346.8,
+    "longitud_quebrada_km": 6.19,
+    "longitud_red_hidrica_km": 61.2
+  },
+  "amenaza_inundacion_ha": {
+    "Alta": 10.8,
+    "Media": 16.41,
+    "Baja": 0.35
+  },
+  "inspecciones": {
+    "total": 12,
+    "por_fenomeno": {
+      "Inundación": 12
+    },
+    "por_barrio": {
+      "Los Naranjos": 3,
+      "La Florida": 2,
+      "Los Balsos No.1": 1,
+      "Altos del Poblado": 1,
+      "Patio Bonito": 1,
+      "Manila": 1,
+      "Barrio Colombia": 1,
+      "Las Lomas No.2": 1,
+      "Las Lomas No.1": 1
+    },
+    "rango_fechas": [
+      "2026-01-28",
+      "2026-03-28"
+    ]
+  },
+  "propuestas": {
+    "pavimentos_permeables_ha": 19.4,
+    "restauracion_laderas_ha": 430.67,
+    "restauracion_riberas_ha": 19.35,
+    "tanques_almacenamiento": 3
+  },
+  "censo": {
+    "total_capa": {
+      "manzanas": 1479,
+      "personas": 302379,
+      "hogares": 111273,
+      "viviendas": 123373,
+      "personas_may_60": 58657,
+      "personas_men_15": 41559,
+      "pob_amenaza_alta": 240,
+      "pob_amenaza_media": 632,
+      "pob_amenaza_baja": 0,
+      "pob_amenaza_total": 872
+    },
+    "por_municipio": {
+      "Envigado": {
+        "manzanas": 191,
+        "personas": 66636,
+        "hogares": 24256,
+        "viviendas": 26479,
+        "personas_may_60": 12420,
+        "personas_men_15": 9591,
+        "pob_amenaza_alta": 0,
+        "pob_amenaza_media": 0,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 0
+      },
+      "Itagüí": {
+        "manzanas": 56,
+        "personas": 9098,
+        "hogares": 2923,
+        "viviendas": 2977,
+        "personas_may_60": 1675,
+        "personas_men_15": 1227,
+        "pob_amenaza_alta": 0,
+        "pob_amenaza_media": 0,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 0
+      },
+      "Medellín": {
+        "manzanas": 1232,
+        "personas": 226645,
+        "hogares": 84094,
+        "viviendas": 93917,
+        "personas_may_60": 44562,
+        "personas_men_15": 30741,
+        "pob_amenaza_alta": 240,
+        "pob_amenaza_media": 632,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 872
+      }
+    },
+    "cuenca": {
+      "manzanas": 196,
+      "personas": 33382,
+      "hogares": 13034,
+      "viviendas": 15819,
+      "personas_may_60": 7713,
+      "personas_men_15": 4080,
+      "pob_amenaza_alta": 240,
+      "pob_amenaza_media": 631,
+      "pob_amenaza_baja": 0,
+      "pob_amenaza_total": 872
+    },
+    "comuna_14": {
+      "manzanas": 442,
+      "personas": 107219,
+      "hogares": 41927,
+      "viviendas": 48876,
+      "personas_may_60": 24892,
+      "personas_men_15": 12965,
+      "pob_amenaza_alta": 240,
+      "pob_amenaza_media": 630,
+      "pob_amenaza_baja": 0,
+      "pob_amenaza_total": 871
+    },
+    "por_barrio": {
+      "Astorga": {
+        "manzanas": 17,
+        "personas": 613,
+        "hogares": 346,
+        "viviendas": 473,
+        "personas_may_60": 228,
+        "personas_men_15": 29,
+        "pob_amenaza_alta": 0,
+        "pob_amenaza_media": 137,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 137
+      },
+      "El Poblado": {
+        "manzanas": 34,
+        "personas": 379,
+        "hogares": 169,
+        "viviendas": 299,
+        "personas_may_60": 133,
+        "personas_men_15": 14,
+        "pob_amenaza_alta": 8,
+        "pob_amenaza_media": 0,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 8
+      },
+      "La Florida": {
+        "manzanas": 30,
+        "personas": 8542,
+        "hogares": 3357,
+        "viviendas": 3973,
+        "personas_may_60": 2610,
+        "personas_men_15": 877,
+        "pob_amenaza_alta": 198,
+        "pob_amenaza_media": 20,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 218
+      },
+      "Las Lomas No.1": {
+        "manzanas": 21,
+        "personas": 2979,
+        "hogares": 1292,
+        "viviendas": 1634,
+        "personas_may_60": 1002,
+        "personas_men_15": 237,
+        "pob_amenaza_alta": 0,
+        "pob_amenaza_media": 4,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 4
+      },
+      "Manila": {
+        "manzanas": 26,
+        "personas": 774,
+        "hogares": 319,
+        "viviendas": 385,
+        "personas_may_60": 269,
+        "personas_men_15": 54,
+        "pob_amenaza_alta": 13,
+        "pob_amenaza_media": 0,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 14
+      },
+      "Patio Bonito": {
+        "manzanas": 27,
+        "personas": 5821,
+        "hogares": 2435,
+        "viviendas": 2710,
+        "personas_may_60": 1986,
+        "personas_men_15": 358,
+        "pob_amenaza_alta": 20,
+        "pob_amenaza_media": 89,
+        "pob_amenaza_baja": 0,
+        "pob_amenaza_total": 110
+      }
+    }
+  },
+  "avisos": [
+    "La capa de geología no se superpone con la cuenca; revisar ubicación o fuente.",
+    "El censo trae 1479 manzanas; 1283 quedan fuera de la cuenca (municipios: Envigado, Itagüí, Medellín).",
+    "La equivalencia ZAIA/ZAIM/ZAIMB → Alta/Media/Baja es provisional."
+  ],
+  "capas": [
+    {
+      "capa": "limite_medellin",
+      "archivo": "data/limite_medellin.geojson",
+      "elementos": 1,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "nombre",
+        "area_ha"
+      ],
+      "tamano_kb": 35.3,
+      "extension": [
+        -75.71963,
+        6.16257,
+        -75.47191,
+        6.37451
+      ]
+    },
+    {
+      "capa": "comuna_14",
+      "archivo": "data/comuna_14.geojson",
+      "elementos": 1,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "nombre",
+        "area_ha"
+      ],
+      "tamano_kb": 18.2,
+      "extension": [
+        -75.58318,
+        6.17567,
+        -75.54661,
+        6.23126
+      ]
+    },
+    {
+      "capa": "cuenca_la_presidenta",
+      "archivo": "data/cuenca_la_presidenta.geojson",
+      "elementos": 1,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "nombre",
+        "area_ha"
+      ],
+      "tamano_kb": 15.2,
+      "extension": [
+        -75.57791,
+        6.1867,
+        -75.52474,
+        6.22244
+      ]
+    },
+    {
+      "capa": "barrios_afectados",
+      "archivo": "data/barrios_afectados.geojson",
+      "elementos": 6,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "nombre",
+        "area_ha",
+        "personas",
+        "hogares",
+        "viviendas",
+        "pob_amenaza_total",
+        "inspecciones"
+      ],
+      "tamano_kb": 18.4,
+      "extension": [
+        -75.57941,
+        6.20012,
+        -75.55881,
+        6.21603
+      ]
+    },
+    {
+      "capa": "mascerca_el_poblado",
+      "archivo": "data/mascerca_el_poblado.geojson",
+      "elementos": 1,
+      "geometria": [
+        "Point"
+      ],
+      "campos": [
+        "nombre",
+        "direccion",
+        "barrio",
+        "comuna",
+        "detalle"
+      ],
+      "tamano_kb": 1.2,
+      "extension": [
+        -75.57176,
+        6.21238,
+        -75.57176,
+        6.21238
+      ]
+    },
+    {
+      "capa": "rio_medellin",
+      "archivo": "data/rio_medellin.geojson",
+      "elementos": 1,
+      "geometria": [
+        "MultiLineString"
+      ],
+      "campos": [
+        "nombre",
+        "longitud_km"
+      ],
+      "tamano_kb": 20.3,
+      "extension": [
+        -75.58709,
+        6.18573,
+        -75.55541,
+        6.31229
+      ]
+    },
+    {
+      "capa": "quebrada_la_presidenta",
+      "archivo": "data/quebrada_la_presidenta.geojson",
+      "elementos": 1,
+      "geometria": [
+        "MultiLineString"
+      ],
+      "campos": [
+        "nombre",
+        "longitud_km"
+      ],
+      "tamano_kb": 9.5,
+      "extension": [
+        -75.57802,
+        6.20275,
+        -75.5324,
+        6.21331
+      ]
+    },
+    {
+      "capa": "red_hidrica",
+      "archivo": "data/red_hidrica.geojson",
+      "elementos": 87,
+      "geometria": [
+        "LineString"
+      ],
+      "campos": [
+        "jerarquia",
+        "longitud_m"
+      ],
+      "tamano_kb": 121.4,
+      "extension": [
+        -75.57802,
+        6.1877,
+        -75.52583,
+        6.22269
+      ]
+    },
+    {
+      "capa": "amenaza_inundacion",
+      "archivo": "data/amenaza_inundacion.geojson",
+      "elementos": 3,
+      "geometria": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "campos": [
+        "codigo",
+        "nivel",
+        "orden",
+        "area_ha"
+      ],
+      "tamano_kb": 33.2,
+      "extension": [
+        -75.57819,
+        6.2027,
+        -75.5376,
+        6.21393
+      ]
+    },
+    {
+      "capa": "geologia_depositos",
+      "archivo": "data/geologia_depositos.geojson",
+      "elementos": 25,
+      "geometria": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "campos": [
+        "unidad",
+        "origen",
+        "tipo",
+        "nivel",
+        "incision",
+        "area_ha"
+      ],
+      "tamano_kb": 71.5,
+      "extension": [
+        -75.61012,
+        6.15626,
+        -75.57738,
+        6.20031
+      ]
+    },
+    {
+      "capa": "inspecciones_tecnicas",
+      "archivo": "data/inspecciones_tecnicas.geojson",
+      "elementos": 12,
+      "geometria": [
+        "Point"
+      ],
+      "campos": [
+        "evento_id",
+        "direccion",
+        "barrio",
+        "comuna",
+        "fecha_ocurrencia",
+        "fecha_registro",
+        "fecha_visita",
+        "fenomeno",
+        "tipo_incidente",
+        "tipo_incidente_fenomeno",
+        "origen",
+        "evento_materializado",
+        "puntaje_amenaza",
+        "puntaje_vulnerabilidad",
+        "puntaje_riesgo",
+        "elementos_expuestos",
+        "muertos",
+        "lesionados",
+        "evacuacion_temporal",
+        "evacuacion_definitiva",
+        "tipo_evacuacion",
+        "tipo_recepcion",
+        "estado",
+        "url_informe",
+        "fecha_referencia"
+      ],
+      "tamano_kb": 11.4,
+      "extension": [
+        -75.57633,
+        6.19142,
+        -75.55093,
+        6.22914
+      ]
+    },
+    {
+      "capa": "propuesta_pavimentos_permeables",
+      "archivo": "data/propuesta_pavimentos_permeables.geojson",
+      "elementos": 6,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "id",
+        "tipo",
+        "descripcion",
+        "area_ha"
+      ],
+      "tamano_kb": 8.4,
+      "extension": [
+        -75.57844,
+        6.19469,
+        -75.55412,
+        6.2159
+      ]
+    },
+    {
+      "capa": "propuesta_restauracion_laderas",
+      "archivo": "data/propuesta_restauracion_laderas.geojson",
+      "elementos": 1,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "id",
+        "tipo",
+        "descripcion",
+        "area_ha"
+      ],
+      "tamano_kb": 3.6,
+      "extension": [
+        -75.54562,
+        6.18628,
+        -75.52483,
+        6.21779
+      ]
+    },
+    {
+      "capa": "propuesta_restauracion_riberas",
+      "archivo": "data/propuesta_restauracion_riberas.geojson",
+      "elementos": 1,
+      "geometria": [
+        "Polygon"
+      ],
+      "campos": [
+        "id",
+        "tipo",
+        "descripcion",
+        "area_ha"
+      ],
+      "tamano_kb": 7.1,
+      "extension": [
+        -75.576,
+        6.20536,
+        -75.54513,
+        6.21295
+      ]
+    },
+    {
+      "capa": "propuesta_tanques_almacenamiento",
+      "archivo": "data/propuesta_tanques_almacenamiento.geojson",
+      "elementos": 3,
+      "geometria": [
+        "Point"
+      ],
+      "campos": [
+        "id",
+        "tipo",
+        "descripcion"
+      ],
+      "tamano_kb": 0.7,
+      "extension": [
+        -75.57716,
+        6.20706,
+        -75.56667,
+        6.21243
+      ]
+    },
+    {
+      "capa": "censo_manzanas",
+      "archivo": "data/censo_manzanas.geojson",
+      "elementos": 1477,
+      "geometria": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "campos": [
+        "cod_dane",
+        "municipio",
+        "personas",
+        "hogares",
+        "viviendas",
+        "personas_may_60",
+        "personas_men_15",
+        "personas_con_dificultad",
+        "personas_sin_educacion",
+        "viv_acueducto",
+        "viv_alcantarillado",
+        "viv_energia",
+        "viv_internet",
+        "area_ha",
+        "densidad_hab_ha",
+        "pct_may_60",
+        "pct_men_15",
+        "pct_viv_internet",
+        "en_cuenca",
+        "en_comuna14",
+        "barrio",
+        "pob_amenaza_alta",
+        "pob_amenaza_media",
+        "pob_amenaza_baja",
+        "pob_amenaza_total"
+      ],
+      "tamano_kb": 1878.4,
+      "extension": [
+        -75.59317,
+        6.16567,
+        -75.51474,
+        6.24125
+      ]
+    }
+  ]
+}

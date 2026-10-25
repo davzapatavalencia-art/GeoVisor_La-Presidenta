@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "propuesta_tanques_almacenamiento",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "tipo": "Tanques de almacenamiento", "descripcion": "" }, "geometry": { "type": "Point", "coordinates": [ -75.577159, 6.212428 ] } },
+{ "type": "Feature", "properties": { "id": 2, "tipo": "Tanques de almacenamiento", "descripcion": "" }, "geometry": { "type": "Point", "coordinates": [ -75.566672, 6.207058 ] } },
+{ "type": "Feature", "properties": { "id": 3, "tipo": "Tanques de almacenamiento", "descripcion": "" }, "geometry": { "type": "Point", "coordinates": [ -75.570293, 6.207897 ] } }
+]
+}

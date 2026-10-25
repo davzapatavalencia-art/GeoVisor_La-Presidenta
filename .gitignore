@@ -1,0 +1,24 @@
+# Datos crudos: viven fuera del repo (../Datos)
+*.zip
+*.kmz
+*.gpkg
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.sbn
+*.sbx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Configuración local de Claude
+.claude/

@@ -1,0 +1,359 @@
+{
+  "visor": {
+    "titulo": "Quebrada La Presidenta",
+    "subtitulo": "Cuenca · Comuna 14 El Poblado · Medellín",
+    "curso": "Comunidad y Territorio",
+    "institucion": "UNAD",
+    "capaEncuadre": "cuenca_la_presidenta",
+    "mapaBase": "oscuro"
+  },
+
+  "mapasBase": [
+    {
+      "id": "oscuro",
+      "nombre": "Oscuro",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+      "atribucion": "Mapa base &copy; Esri, HERE, Garmin, &copy; OpenStreetMap",
+      "maxZoom": 20,
+      "maxNativeZoom": 16
+    },
+    {
+      "id": "claro",
+      "nombre": "Claro",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+      "atribucion": "Mapa base &copy; Esri, HERE, Garmin, &copy; OpenStreetMap",
+      "maxZoom": 20,
+      "maxNativeZoom": 16
+    },
+    {
+      "id": "ortofoto",
+      "nombre": "Ortofoto",
+      "url": "https://tiles.arcgis.com/tiles/gTVMpnerZFjZtXQb/arcgis/rest/services/Ortofoto_MED_Ep1995_6/MapServer/tile/{z}/{y}/{x}",
+      "atribucion": "Ortofoto &copy; Alcaldía de Medellín",
+      "maxZoom": 21,
+      "maxNativeZoom": 20
+    },
+    {
+      "id": "satelite",
+      "nombre": "Satélite",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      "atribucion": "Imagen &copy; Esri, Maxar, Earthstar Geographics",
+      "maxZoom": 20,
+      "maxNativeZoom": 19
+    },
+    {
+      "id": "calles",
+      "nombre": "Calles",
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "atribucion": "&copy; Colaboradores de OpenStreetMap",
+      "maxZoom": 19
+    }
+  ],
+
+  "grupos": [
+    {
+      "id": "territorio",
+      "nombre": "Territorio",
+      "icono": "mapa",
+      "capas": [
+        {
+          "id": "cuenca_la_presidenta",
+          "nombre": "Cuenca La Presidenta",
+          "archivo": "data/cuenca_la_presidenta.geojson",
+          "visible": true,
+          "orden": 30,
+          "estilo": { "tipo": "simple", "color": "#F1B621", "peso": 2.5, "relleno": "#F1B621", "opacidadRelleno": 0.05 },
+          "popup": {
+            "titulo": "{nombre}",
+            "campos": [{ "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }]
+          }
+        },
+        {
+          "id": "comuna_14",
+          "nombre": "Comuna 14 – El Poblado",
+          "archivo": "data/comuna_14.geojson",
+          "visible": true,
+          "orden": 28,
+          "estilo": { "tipo": "simple", "color": "#C77DB5", "peso": 1.5, "guiones": "6 6", "relleno": "none" },
+          "popup": {
+            "titulo": "{nombre}",
+            "campos": [{ "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }]
+          }
+        },
+        {
+          "id": "barrios_afectados",
+          "nombre": "Barrios de la cuenca",
+          "descripcion": "Barrios con inspecciones o zonas de amenaza por inundación.",
+          "archivo": "data/barrios_afectados.geojson",
+          "visible": false,
+          "orden": 26,
+          "estilo": { "tipo": "simple", "color": "#36C2BC", "peso": 1.5, "relleno": "#248F8B", "opacidadRelleno": 0.12 },
+          "etiqueta": "nombre",
+          "popup": {
+            "titulo": "{nombre}",
+            "subtitulo": "Barrio · Censo 2018",
+            "campos": [
+              { "campo": "personas", "etiqueta": "Personas", "formato": "entero" },
+              { "campo": "hogares", "etiqueta": "Hogares", "formato": "entero" },
+              { "campo": "viviendas", "etiqueta": "Viviendas", "formato": "entero" },
+              { "campo": "pob_amenaza_total", "etiqueta": "Personas en zona de amenaza*", "formato": "entero" },
+              { "campo": "inspecciones", "etiqueta": "Inspecciones técnicas", "formato": "entero" },
+              { "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }
+            ],
+            "nota": "*Estimación ponderada por área de cada manzana."
+          }
+        },
+        {
+          "id": "limite_medellin",
+          "nombre": "Límite de Medellín",
+          "archivo": "data/limite_medellin.geojson",
+          "visible": false,
+          "orden": 20,
+          "estilo": { "tipo": "simple", "color": "#9FB3C8", "peso": 1.2, "guiones": "2 6", "relleno": "none" }
+        },
+        {
+          "id": "mascerca_el_poblado",
+          "nombre": "MásCerca El Poblado",
+          "descripcion": "Sede de atención a la ciudadanía de la Alcaldía.",
+          "archivo": "data/mascerca_el_poblado.geojson",
+          "visible": false,
+          "orden": 60,
+          "estilo": { "tipo": "punto", "forma": "cuadro", "color": "#F1B621", "radio": 8 },
+          "popup": {
+            "titulo": "{nombre}",
+            "subtitulo": "Atención a la ciudadanía",
+            "campos": [
+              { "campo": "direccion", "etiqueta": "Dirección" },
+              { "campo": "barrio", "etiqueta": "Barrio" },
+              { "campo": "comuna", "etiqueta": "Comuna" }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "agua",
+      "nombre": "Agua y amenaza",
+      "icono": "gota",
+      "capas": [
+        {
+          "id": "rio_medellin",
+          "nombre": "Río Medellín",
+          "archivo": "data/rio_medellin.geojson",
+          "visible": true,
+          "orden": 40,
+          "estilo": { "tipo": "simple", "color": "#3FA9F5", "peso": 4.5 },
+          "popup": {
+            "titulo": "{nombre}",
+            "campos": [{ "campo": "longitud_km", "etiqueta": "Longitud en el área", "formato": "decimal", "unidad": "km" }]
+          }
+        },
+        {
+          "id": "quebrada_la_presidenta",
+          "nombre": "Quebrada La Presidenta",
+          "archivo": "data/quebrada_la_presidenta.geojson",
+          "visible": true,
+          "orden": 42,
+          "estilo": { "tipo": "simple", "color": "#5BD1FF", "peso": 3.2 },
+          "popup": {
+            "titulo": "{nombre}",
+            "campos": [{ "campo": "longitud_km", "etiqueta": "Longitud", "formato": "decimal", "unidad": "km" }]
+          }
+        },
+        {
+          "id": "red_hidrica",
+          "nombre": "Red hídrica",
+          "archivo": "data/red_hidrica.geojson",
+          "visible": false,
+          "orden": 41,
+          "estilo": {
+            "tipo": "categorias",
+            "campo": "jerarquia",
+            "base": { "color": "#5BD1FF" },
+            "categorias": [
+              { "valor": "Principal", "etiqueta": "Drenaje principal", "estilo": { "color": "#5BD1FF", "peso": 2.2 } },
+              { "valor": "Secundario", "etiqueta": "Drenaje secundario", "estilo": { "color": "#5BD1FF", "peso": 1, "opacidad": 0.7 } }
+            ]
+          },
+          "popup": {
+            "titulo": "Drenaje {jerarquia}",
+            "campos": [{ "campo": "longitud_m", "etiqueta": "Longitud del tramo", "formato": "entero", "unidad": "m" }]
+          }
+        },
+        {
+          "id": "amenaza_inundacion",
+          "nombre": "Amenaza por inundación",
+          "descripcion": "Niveles provisionales: falta confirmar con el POT.",
+          "archivo": "data/amenaza_inundacion.geojson",
+          "visible": true,
+          "orden": 35,
+          "estilo": {
+            "tipo": "categorias",
+            "campo": "nivel",
+            "base": { "peso": 1, "opacidadRelleno": 0.55 },
+            "categorias": [
+              { "valor": "Alta", "etiqueta": "Alta", "estilo": { "color": "#FF4D5E", "relleno": "#FF4D5E" } },
+              { "valor": "Media", "etiqueta": "Media", "estilo": { "color": "#F47920", "relleno": "#F47920" } },
+              { "valor": "Baja", "etiqueta": "Baja", "estilo": { "color": "#F1B621", "relleno": "#F1B621" } }
+            ]
+          },
+          "popup": {
+            "titulo": "Amenaza {nivel}",
+            "subtitulo": "Inundación",
+            "campos": [
+              { "campo": "codigo", "etiqueta": "Código" },
+              { "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }
+            ]
+          }
+        },
+        {
+          "id": "inspecciones_tecnicas",
+          "nombre": "Inspecciones técnicas",
+          "descripcion": "Visitas del SIRMED por eventos de inundación (2026).",
+          "archivo": "data/inspecciones_tecnicas.geojson",
+          "visible": true,
+          "orden": 70,
+          "estilo": { "tipo": "punto", "forma": "pulso", "color": "#F47920", "radio": 7 },
+          "popup": {
+            "titulo": "{tipo_incidente}",
+            "subtitulo": "Inspección técnica · {barrio}",
+            "campos": [
+              { "campo": "fecha_referencia", "etiqueta": "Fecha", "formato": "fecha" },
+              { "campo": "direccion", "etiqueta": "Dirección" },
+              { "campo": "fenomeno", "etiqueta": "Fenómeno" },
+              { "campo": "origen", "etiqueta": "Origen" },
+              { "campo": "evento_materializado", "etiqueta": "Evento materializado" },
+              { "campo": "elementos_expuestos", "etiqueta": "Elementos expuestos", "formato": "entero" },
+              { "campo": "tipo_evacuacion", "etiqueta": "Evacuación" },
+              { "campo": "estado", "etiqueta": "Estado" }
+            ],
+            "barras": [
+              { "campo": "puntaje_amenaza", "etiqueta": "Amenaza", "max": 10 },
+              { "campo": "puntaje_vulnerabilidad", "etiqueta": "Vulnerabilidad", "max": 10 },
+              { "campo": "puntaje_riesgo", "etiqueta": "Riesgo", "max": 10 }
+            ],
+            "enlace": { "campo": "url_informe", "texto": "Ver informe técnico (PDF)" }
+          }
+        },
+        {
+          "id": "geologia_depositos",
+          "nombre": "Geología: depósitos",
+          "descripcion": "Atención: esta capa no se superpone con la cuenca; falta revisar su ubicación.",
+          "archivo": "data/geologia_depositos.geojson",
+          "visible": false,
+          "orden": 22,
+          "estilo": {
+            "tipo": "categorias",
+            "campo": "origen",
+            "base": { "peso": 0.8, "opacidadRelleno": 0.45 },
+            "categorias": [
+              { "valor": "Depósito Aluvial", "etiqueta": "Depósito aluvial", "estilo": { "color": "#D9B779", "relleno": "#D9B779" } },
+              { "valor": "Depósito de Vertiente", "etiqueta": "Depósito de vertiente", "estilo": { "color": "#A1887F", "relleno": "#A1887F" } }
+            ]
+          },
+          "popup": {
+            "titulo": "{unidad}",
+            "subtitulo": "Unidad geológica",
+            "campos": [
+              { "campo": "origen", "etiqueta": "Origen" },
+              { "campo": "tipo", "etiqueta": "Tipo" },
+              { "campo": "nivel", "etiqueta": "Nivel" },
+              { "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "comunidad",
+      "nombre": "Comunidad",
+      "icono": "personas",
+      "capas": [
+        {
+          "id": "censo_manzanas",
+          "nombre": "Censo 2018 por manzana",
+          "descripcion": "Las manzanas fuera de la cuenca se muestran como contexto.",
+          "archivo": "data/censo_manzanas.geojson",
+          "visible": false,
+          "orden": 10,
+          "estilo": {
+            "tipo": "coropleta",
+            "campoDestacado": "en_cuenca",
+            "clases": 5,
+            "paleta": ["#0E3A5B", "#0F6E8C", "#248F8B", "#7BBF5A", "#F1B621"],
+            "contexto": { "color": "#9FB3C8", "peso": 0.3, "opacidad": 0.35, "relleno": "#9FB3C8", "opacidadRelleno": 0.06 },
+            "variables": [
+              { "campo": "densidad_hab_ha", "etiqueta": "Densidad (hab/ha)", "formato": "decimal" },
+              { "campo": "personas", "etiqueta": "Personas", "formato": "entero" },
+              { "campo": "pct_may_60", "etiqueta": "% personas mayores de 60", "formato": "porcentaje" },
+              { "campo": "pct_men_15", "etiqueta": "% personas menores de 15", "formato": "porcentaje" },
+              { "campo": "pct_viv_internet", "etiqueta": "% viviendas con internet", "formato": "porcentaje" },
+              { "campo": "pob_amenaza_total", "etiqueta": "Personas en zona de amenaza", "formato": "decimal" }
+            ]
+          },
+          "popup": {
+            "titulo": "Manzana censal",
+            "subtitulo": "{municipio} · {barrio}",
+            "campos": [
+              { "campo": "personas", "etiqueta": "Personas", "formato": "entero" },
+              { "campo": "hogares", "etiqueta": "Hogares", "formato": "entero" },
+              { "campo": "viviendas", "etiqueta": "Viviendas", "formato": "entero" },
+              { "campo": "densidad_hab_ha", "etiqueta": "Densidad", "formato": "decimal", "unidad": "hab/ha" },
+              { "campo": "pct_may_60", "etiqueta": "Mayores de 60", "formato": "porcentaje" },
+              { "campo": "pct_men_15", "etiqueta": "Menores de 15", "formato": "porcentaje" },
+              { "campo": "pct_viv_internet", "etiqueta": "Viviendas con internet", "formato": "porcentaje" },
+              { "campo": "pob_amenaza_total", "etiqueta": "Personas en zona de amenaza*", "formato": "decimal" }
+            ],
+            "nota": "*Estimación ponderada por área. Fuente: DANE, CNPV 2018."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "propuestas",
+      "nombre": "Propuestas",
+      "icono": "brote",
+      "capas": [
+        {
+          "id": "propuesta_restauracion_laderas",
+          "nombre": "Restauración de laderas",
+          "archivo": "data/propuesta_restauracion_laderas.geojson",
+          "visible": false,
+          "orden": 32,
+          "estilo": { "tipo": "simple", "color": "#50B748", "peso": 1.2, "relleno": "#50B748", "opacidadRelleno": 0.3 },
+          "popup": { "titulo": "{tipo}", "subtitulo": "Propuesta de intervención", "campos": [{ "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }] }
+        },
+        {
+          "id": "propuesta_restauracion_riberas",
+          "nombre": "Restauración de riberas",
+          "archivo": "data/propuesta_restauracion_riberas.geojson",
+          "visible": false,
+          "orden": 33,
+          "estilo": { "tipo": "simple", "color": "#36C2BC", "peso": 1.2, "relleno": "#36C2BC", "opacidadRelleno": 0.4 },
+          "popup": { "titulo": "{tipo}", "subtitulo": "Propuesta de intervención", "campos": [{ "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }] }
+        },
+        {
+          "id": "propuesta_pavimentos_permeables",
+          "nombre": "Pavimentos permeables",
+          "archivo": "data/propuesta_pavimentos_permeables.geojson",
+          "visible": false,
+          "orden": 34,
+          "estilo": { "tipo": "simple", "color": "#B4E05A", "peso": 1.2, "relleno": "#B4E05A", "opacidadRelleno": 0.45 },
+          "popup": { "titulo": "{tipo}", "subtitulo": "Propuesta de intervención", "campos": [{ "campo": "area_ha", "etiqueta": "Área", "formato": "decimal", "unidad": "ha" }] }
+        },
+        {
+          "id": "propuesta_tanques_almacenamiento",
+          "nombre": "Tanques de almacenamiento",
+          "archivo": "data/propuesta_tanques_almacenamiento.geojson",
+          "visible": false,
+          "orden": 65,
+          "estilo": { "tipo": "punto", "forma": "rombo", "color": "#36C2BC", "radio": 8 },
+          "popup": { "titulo": "{tipo}", "subtitulo": "Propuesta de intervención · #{id}", "campos": [] }
+        }
+      ]
+    }
+  ]
+}

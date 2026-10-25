@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GeoVisor La Presidenta · UNAD</title>
+  <meta name="description" content="Geovisor de la cuenca de la Quebrada La Presidenta (Comuna 14, Medellín): territorio, comunidad, amenaza por inundación y propuestas de intervención. Curso Comunidad y Territorio, UNAD.">
+  <meta name="theme-color" content="#04131F">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="css/visor.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div id="mapa" aria-label="Mapa de la cuenca de la Quebrada La Presidenta"></div>
+
+  <!-- Panel principal -->
+  <aside id="panel" class="panel" aria-label="Panel de información">
+    <button id="panel-asa" class="panel-asa" type="button" aria-label="Expandir o contraer el panel">
+      <span></span>
+    </button>
+
+    <header class="panel-cabecera">
+      <div class="marca">
+        <span class="marca-unad">UNAD</span>
+        <span class="marca-curso" data-visor="curso"></span>
+      </div>
+      <h1 class="titulo" data-visor="titulo"></h1>
+      <p class="subtitulo" data-visor="subtitulo"></p>
+      <button id="panel-colapsar" class="boton-icono panel-colapsar" type="button" aria-label="Ocultar panel" title="Ocultar panel"></button>
+    </header>
+
+    <nav class="pestanas" role="tablist">
+      <button class="pestana activa" role="tab" aria-selected="true" aria-controls="pestana-territorio" data-pestana="territorio"></button>
+      <button class="pestana" role="tab" aria-selected="false" aria-controls="pestana-capas" data-pestana="capas"></button>
+      <button class="pestana" role="tab" aria-selected="false" aria-controls="pestana-acerca" data-pestana="acerca"></button>
+    </nav>
+
+    <div class="panel-cuerpo">
+      <section id="pestana-territorio" class="contenido-pestana activa" role="tabpanel"></section>
+      <section id="pestana-capas" class="contenido-pestana" role="tabpanel"></section>
+      <section id="pestana-acerca" class="contenido-pestana" role="tabpanel"></section>
+    </div>
+  </aside>
+
+  <button id="panel-abrir" class="boton-flotante panel-abrir" type="button" aria-label="Mostrar panel" title="Mostrar panel"></button>
+
+  <!-- Selector de mapa base -->
+  <div id="mapas-base" class="mapas-base" role="radiogroup" aria-label="Mapa base"></div>
+
+  <!-- Controles del mapa -->
+  <div id="controles" class="controles"></div>
+
+  <!-- Leyenda -->
+  <div id="leyenda" class="leyenda">
+    <button id="leyenda-alternar" class="leyenda-cabecera" type="button" aria-expanded="true">
+      <span>Leyenda</span><i class="chevron"></i>
+    </button>
+    <div id="leyenda-cuerpo" class="leyenda-cuerpo"></div>
+  </div>
+
+  <!-- Coordenadas -->
+  <div id="coordenadas" class="coordenadas" aria-live="off"></div>
+
+  <!-- Aviso de carga -->
+  <div id="cargando" class="cargando" hidden><span class="giro"></span><span>Cargando capa…</span></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
