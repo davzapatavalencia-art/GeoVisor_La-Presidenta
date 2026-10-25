@@ -142,7 +142,7 @@ export class Panel {
     });
 
     const escenas = {
-      comunidad: { activar: ["censo_manzanas", "barrios_afectados"], apagar: ["amenaza_inundacion", "geologia_depositos"] },
+      comunidad: { activar: ["censo_manzanas", "barrios_afectados"], apagar: ["amenaza_inundacion"] },
       agua: { activar: ["red_hidrica", "amenaza_inundacion", "inspecciones_tecnicas"], apagar: ["censo_manzanas"] },
       propuestas: {
         activar: ["propuesta_restauracion_laderas", "propuesta_restauracion_riberas", "propuesta_pavimentos_permeables", "propuesta_tanques_almacenamiento"],
