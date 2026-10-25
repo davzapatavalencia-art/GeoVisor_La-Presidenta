@@ -77,7 +77,6 @@ Qué hace:
 | `rio_medellin`, `quebrada_la_presidenta` | Kmz_Basica | Disueltas en una sola línea |
 | `red_hidrica` | Kmz_Basica/Red Hídrica.kml | `jerarquia`: Principal / Secundario |
 | `amenaza_inundacion` | Kmz_Basica/Amenaza Inundación.kml | `nivel` provisional (ver abajo) |
-| `geologia_depositos` | Capas_Geologia_Cuenca.zip | Ver advertencia |
 | `inspecciones_tecnicas` | SIRMED (zip del 2026-09-11) | Con fechas, tipo de incidente, puntajes y enlace al informe |
 | `propuesta_*` | Archivos `.gpkg` | Pavimentos permeables, restauración de laderas y riberas, tanques |
 | `censo_manzanas` | Capas_LaPresidenta_ComunaXIV.zip (CNPV 2018) | Indicadores, `en_cuenca`, `en_comuna14`, `barrio`, `pob_amenaza_*` |
@@ -85,7 +84,7 @@ Qué hace:
 ### Pendientes por revisar
 
 - **Amenaza por inundación:** la equivalencia de los códigos ZAIA / ZAIM / ZAIMB con los niveles Alta / Media / Baja es provisional. Hay que confirmarla con el POT.
-- **Geología:** los depósitos no se superponen con la cuenca; quedan al suroccidente, junto al río Medellín. Hay que revisar si es la capa correcta.
+- **Geología:** `Capas_Geologia_Cuenca.zip` no se usa. Sus depósitos no tocan la cuenca (quedan al suroccidente, junto al río Medellín), así que se retiraron del visor. Si aparece la capa correcta, se puede volver a agregar.
 - **Censo:** incluye manzanas de Medellín, Envigado e Itagüí. Se usan como contexto; las cifras de la cuenca salen del campo `en_cuenca`.
 - **Manzanas degeneradas:** 2 manzanas del censo (`0500110000000009100353` y `0500110000000016090304`, 164 personas) tienen en la fuente una geometría de ~1 m², aunque su campo AREA dice 837 y 2.038 m². No se dibujan, pero sí cuentan en los totales.
 - **Barrios:** cada manzana se asigna a un barrio por un punto interior, sin repetirla. Por eso los conteos son menores que los de los KMZ por barrio, que cuentan cualquier manzana que toque el barrio.

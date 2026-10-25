@@ -188,7 +188,6 @@
     }
   },
   "avisos": [
-    "La capa de geología no se superpone con la cuenca; revisar ubicación o fuente.",
     "El censo trae 1479 manzanas; 1283 quedan fuera de la cuenca (municipios: Envigado, Itagüí, Medellín).",
     "La equivalencia ZAIA/ZAIM/ZAIMB → Alta/Media/Baja es provisional."
   ],
@@ -373,30 +372,6 @@
         6.2027,
         -75.5376,
         6.21393
-      ]
-    },
-    {
-      "capa": "geologia_depositos",
-      "archivo": "data/geologia_depositos.geojson",
-      "elementos": 25,
-      "geometria": [
-        "MultiPolygon",
-        "Polygon"
-      ],
-      "campos": [
-        "unidad",
-        "origen",
-        "tipo",
-        "nivel",
-        "incision",
-        "area_ha"
-      ],
-      "tamano_kb": 71.5,
-      "extension": [
-        -75.61012,
-        6.15626,
-        -75.57738,
-        6.20031
       ]
     },
     {

@@ -51,7 +51,6 @@ def rutas_fuente(datos: Path) -> dict:
     basica = datos / "Kmz_Basica"
     especial = datos / "Kmz_Especializadas"
     zip_lp = datos / "Capas_LaPresidenta_ComunaXIV.zip"
-    zip_geo = datos / "Capas_Geologia_Cuenca.zip"
     zip_insp = next((datos / "Geovisor de Inspecciones Tecnicas").glob("*.zip"))
     return {
         "medellin": basica / "Medellin.kml",
@@ -64,7 +63,6 @@ def rutas_fuente(datos: Path) -> dict:
         "amenaza": basica / "Amenaza Inundación.kml",
         "mascerca": f"/vsizip/{especial / 'MasCerca_El_Poblado.kmz'}/doc.kml",
         "censo": f"/vsizip/{zip_lp}/export_capas/Censo_CNPV2018_ComunaXIV.geojson",
-        "geologia": f"/vsizip/{zip_geo}/Geologia_Depositos_Cuenca.geojson",
         "inspecciones": f"/vsizip/{zip_insp}",
         "pavimentos": datos / "pavimentospermeables.gpkg",
         "laderas": datos / "restauracionladeras.gpkg",
@@ -200,16 +198,6 @@ def capa_amenaza(ruta) -> gpd.GeoDataFrame:
     gdf["area_ha"] = (metrico(gdf).area / 1e4).round(2)
     gdf = gdf.sort_values("orden").reset_index(drop=True)
     return simplificar(gdf[["codigo", "nivel", "orden", "area_ha", "geometry"]], 0.5)
-
-
-def capa_geologia(ruta) -> gpd.GeoDataFrame:
-    gdf = leer(ruta)
-    gdf = gdf.rename(columns={"UG": "unidad", "ORIGEN": "origen", "TIPO": "tipo",
-                              "NIVEL": "nivel", "INCISION": "incision"})
-    gdf["unidad"] = gdf["unidad"].fillna(gdf["origen"])
-    gdf["area_ha"] = (metrico(gdf).area / 1e4).round(2)
-    cols = ["unidad", "origen", "tipo", "nivel", "incision", "area_ha", "geometry"]
-    return simplificar(gdf[cols], 0.5)
 
 
 def capa_inspecciones(ruta) -> gpd.GeoDataFrame:
@@ -392,7 +380,6 @@ def main():
     quebrada = capa_cauce(src["quebrada"], "Quebrada La Presidenta")
     red = capa_red_hidrica(src["red"])
     amenaza = capa_amenaza(src["amenaza"])
-    geologia = capa_geologia(src["geologia"])
     inspecciones = capa_inspecciones(src["inspecciones"])
 
     print("Propuestas de intervención")
@@ -423,7 +410,6 @@ def main():
     guardar(quebrada, "quebrada_la_presidenta", inventario)
     guardar(red, "red_hidrica", inventario)
     guardar(amenaza, "amenaza_inundacion", inventario)
-    guardar(geologia, "geologia_depositos", inventario)
     guardar(inspecciones, "inspecciones_tecnicas", inventario)
     guardar(pavimentos, "propuesta_pavimentos_permeables", inventario)
     guardar(laderas, "propuesta_restauracion_laderas", inventario)
@@ -432,10 +418,7 @@ def main():
     guardar(censo, "censo_manzanas", inventario, 5)  # 5 decimales ≈ 1 m
 
     # Controles de calidad que conviene revisar a mano
-    cuenca_m = metrico(cuenca).union_all()
     avisos = []
-    if metrico(geologia).intersection(cuenca_m).area.sum() == 0:
-        avisos.append("La capa de geología no se superpone con la cuenca; revisar ubicación o fuente.")
     fuera = (~censo["en_cuenca"]).sum()
     avisos.append(f"El censo trae {len(censo)} manzanas; {fuera} quedan fuera de la cuenca "
                   f"(municipios: {', '.join(sorted(censo['municipio'].unique()))}).")
