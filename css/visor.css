@@ -1,10 +1,10 @@
 /* ==========================================================================
-   GeoVisor La Presidenta · UNAD
-   Paleta institucional UNAD sobre una interfaz oscura translúcida.
+   GeoVisor La Presidenta
+   Paleta de color sobre una interfaz oscura translúcida.
    ========================================================================== */
 
 :root {
-  /* Identidad UNAD */
+  /* Paleta */
   --unad-azul: #004669;
   --unad-naranja: #F47920;
   --unad-amarillo: #F1B621;

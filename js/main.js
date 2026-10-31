@@ -113,7 +113,7 @@ function coordenadas(mapa) {
 
 async function iniciar() {
   const [config, resumen] = await Promise.all([cargarJSON("config/capas.json"), cargarJSON("data/resumen.json")]);
-  document.title = `GeoVisor ${config.visor.titulo} · ${config.visor.institucion}`;
+  document.title = `GeoVisor ${config.visor.titulo}`;
 
   const mapa = crearMapa();
   mapasBase(mapa, config);

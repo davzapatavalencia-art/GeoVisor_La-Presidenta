@@ -1,6 +1,6 @@
 # GeoVisor Quebrada La Presidenta
 
-Geovisor web de la cuenca de la Quebrada La Presidenta (Comuna 14 – El Poblado, Medellín), desarrollado para el curso **Comunidad y Territorio** de la UNAD.
+Geovisor web de la cuenca de la Quebrada La Presidenta (Comuna 14 – El Poblado, Medellín), adaptado como objeto virtual de aprendizaje (OVA 2.0) para el seminario Educación y Cibercultura.
 
 Es un sitio estático (HTML + CSS + JavaScript, sin paso de compilación) publicado con GitHub Pages.
 
@@ -8,7 +8,7 @@ Es un sitio estático (HTML + CSS + JavaScript, sin paso de compilación) public
 
 ```
 index.html            Página del visor
-css/visor.css         Estilos (identidad UNAD, escritorio y móvil)
+css/visor.css         Estilos (escritorio y móvil)
 js/                   Lógica del visor (módulos ES, sin compilación)
   main.js             Arranque: mapa, mapas base, controles
   capas.js            Carga diferida de capas, opacidad, ficha al hacer clic

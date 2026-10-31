@@ -257,9 +257,16 @@ export class Panel {
     const v = this.config.visor;
     document.getElementById("pestana-acerca").innerHTML = `
       <div class="bloque">
-        <h2 class="bloque-titulo">Sobre el geovisor</h2>
-        <p class="texto">Proyecto del curso <strong>${escapar(v.curso)}</strong> de la Universidad Nacional Abierta y a Distancia (<strong>${escapar(v.institucion)}</strong>). Lee la cuenca de la Quebrada La Presidenta como un territorio vivo: el agua, el riesgo y las personas que lo habitan.</p>
-        <p class="texto">Haz clic en cualquier punto del mapa para ver todo lo que hay en ese lugar: manzana censal, barrio, nivel de amenaza y cuenca.</p>
+        <h2 class="bloque-titulo">Sobre este OVA</h2>
+        <p class="texto">Objeto virtual de aprendizaje (OVA 2.0) para <strong>leer un territorio</strong>: la cuenca de la Quebrada La Presidenta, su agua, su riesgo por inundación y las personas que la habitan.</p>
+        <p class="texto"><strong>Objetivo de aprendizaje:</strong> que quien lo explore pueda identificar dónde y a quién afecta la amenaza por inundación, y argumentar qué soluciones basadas en la naturaleza podrían reducirla.</p>
+      </div>
+      <div class="bloque" style="--color-bloque:var(--unad-amarillo)">
+        <h2 class="bloque-titulo">Ruta de exploración</h2>
+        <p class="texto"><strong>1. Ubícate.</strong> En <em>Territorio</em> lee las cifras clave de la cuenca.</p>
+        <p class="texto"><strong>2. Explora.</strong> Haz clic en cualquier punto del mapa: verás manzana censal, barrio, nivel de amenaza y cuenca.</p>
+        <p class="texto"><strong>3. Contrasta.</strong> En <em>Capas</em> activa la red hídrica, las inspecciones técnicas y las propuestas, y cambia el mapa base para ver el terreno real.</p>
+        <p class="texto"><strong>4. Reflexiona.</strong> ¿Qué zonas tienen más personas expuestas? ¿Dónde pondrías primero una intervención y por qué?</p>
       </div>
       <div class="bloque" style="--color-bloque:#36C2BC">
         <h2 class="bloque-titulo">Fuentes</h2>
